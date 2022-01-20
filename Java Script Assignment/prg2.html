@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+</head>
+<script type="text/javascript">
+  let num = prompt("Enter the number: ");
+
+  if (num == 1) {
+    alert(" 1 is neither prime nor composite");
+    return;
+  }
+  else{
+  let sum = 0;
+  let flag = 0;
+
+
+  for (let i = 2; i <= num; i++) {
+    flag = 0;
+    for (let j = 2; j < i; j++) {
+      if (i % j == 0) {
+        flag = 1;
+
+      }
+    }
+    if (flag == 0) {
+      sum = sum + i;
+    }
+    if (sum >= num) {
+      break;
+    }
+  }
+  if (num == sum)
+    document.write("Yes");
+  else
+    document.write("No");
+  }    
+</script>
+
+</html>

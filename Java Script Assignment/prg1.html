@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+</head>
+<script type="text/javascript">
+
+  let num1 = prompt("Enter first number: ");
+  let num2 = prompt("Enter second number: ");
+  if (num1 == 1 || num2 == 1) {
+    alert(" 1 is neither prime nor composite");
+  }
+  else{
+  let sum = 0;
+  let flag = 0;
+  for (let number = num1; number <= num2; number++) {
+    flag = 0;
+    for (let i = 2; i < number; i++) {
+      if (number % i == 0) {
+        flag = 1;
+      }
+    }
+    if (flag == 0) {
+      sum = sum + (number * number);
+    }
+
+  }
+
+  document.write("sum of squares of alternative prime numbers:" + sum);
+}
+</script>
+
+</html>
